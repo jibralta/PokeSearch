@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39A479A5A9FA3E79157003F2 /* Pods_PokeSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4857D40953A0BE99B9AE00E /* Pods_PokeSearch.framework */; };
 		E0CFD2231DFCC97D002C0035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFD2221DFCC97D002C0035 /* AppDelegate.swift */; };
 		E0CFD2251DFCC97D002C0035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0CFD2241DFCC97D002C0035 /* ViewController.swift */; };
 		E0CFD2281DFCC97D002C0035 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CFD2261DFCC97D002C0035 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		26503DFEDE93C71EB859FC5D /* Pods-PokeSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSearch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSearch/Pods-PokeSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		A4857D40953A0BE99B9AE00E /* Pods_PokeSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA949990BEBAD43759AAB640 /* Pods-PokeSearch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSearch.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSearch/Pods-PokeSearch.release.xcconfig"; sourceTree = "<group>"; };
 		E0CFD21F1DFCC97D002C0035 /* PokeSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0CFD2221DFCC97D002C0035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0CFD2241DFCC97D002C0035 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39A479A5A9FA3E79157003F2 /* Pods_PokeSearch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F6DC2DCC8FD24A8CC8552C9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4857D40953A0BE99B9AE00E /* Pods_PokeSearch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A1A4E2393BE98502294D442F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				26503DFEDE93C71EB859FC5D /* Pods-PokeSearch.debug.xcconfig */,
+				DA949990BEBAD43759AAB640 /* Pods-PokeSearch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E0CFD2161DFCC97D002C0035 = {
 			isa = PBXGroup;
 			children = (
 				E0CFD2211DFCC97D002C0035 /* PokeSearch */,
 				E0CFD2201DFCC97D002C0035 /* Products */,
+				A1A4E2393BE98502294D442F /* Pods */,
+				2F6DC2DCC8FD24A8CC8552C9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E0CFD2311DFCC97D002C0035 /* Build configuration list for PBXNativeTarget "PokeSearch" */;
 			buildPhases = (
+				54B4F671CE4F67027CCD52E7 /* [CP] Check Pods Manifest.lock */,
 				E0CFD21B1DFCC97D002C0035 /* Sources */,
 				E0CFD21C1DFCC97D002C0035 /* Frameworks */,
 				E0CFD21D1DFCC97D002C0035 /* Resources */,
+				6D186FE7E1CA61A79DAFD677 /* [CP] Embed Pods Frameworks */,
+				58A6BD6BD8636D14F62C7CFE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54B4F671CE4F67027CCD52E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		58A6BD6BD8636D14F62C7CFE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeSearch/Pods-PokeSearch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D186FE7E1CA61A79DAFD677 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PokeSearch/Pods-PokeSearch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E0CFD21B1DFCC97D002C0035 /* Sources */ = {
@@ -259,8 +334,10 @@
 		};
 		E0CFD2321DFCC97D002C0035 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26503DFEDE93C71EB859FC5D /* Pods-PokeSearch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HE7TTXQ758;
 				INFOPLIST_FILE = PokeSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -272,8 +349,10 @@
 		};
 		E0CFD2331DFCC97D002C0035 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA949990BEBAD43759AAB640 /* Pods-PokeSearch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = HE7TTXQ758;
 				INFOPLIST_FILE = PokeSearch/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -302,6 +381,7 @@
 				E0CFD2331DFCC97D002C0035 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
